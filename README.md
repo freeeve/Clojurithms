@@ -15,14 +15,14 @@ Example union-find usage:
   (:require [clojurithms.unionfind :as uf]))
 
 ; create a new union-find structure with vector length 10
-(def myuf (with-length 10)) ; #clojurithms.unionfind.unionfind{:ids [0 1 2 3 4 5 6 7 8 9], :sizes [1 1 1 1 1 1 1 1 1 1]}
+(def myuf (uf/with-length 10)) ; #clojurithms.unionfind.unionfind{:ids [0 1 2 3 4 5 6 7 8 9], :sizes [1 1 1 1 1 1 1 1 1 1]}
 
 ; union (connect) 0 to 1 and 0 to 9
-(def myuf (union myuf 0 1)) ; #clojurithms.unionfind.unionfind{:ids [0 0 2 3 4 5 6 7 8 9], :sizes [2 1 1 1 1 1 1 1 1 1]}
-(def myuf (union myuf 0 9)) ; #clojurithms.unionfind.unionfind{:ids [0 0 2 3 4 5 6 7 8 0], :sizes [3 1 1 1 1 1 1 1 1 1]}
+(def myuf (uf/union myuf 0 1)) ; #clojurithms.unionfind.unionfind{:ids [0 0 2 3 4 5 6 7 8 9], :sizes [2 1 1 1 1 1 1 1 1 1]}
+(def myuf (uf/union myuf 0 9)) ; #clojurithms.unionfind.unionfind{:ids [0 0 2 3 4 5 6 7 8 0], :sizes [3 1 1 1 1 1 1 1 1 1]}
 
 ; check whether 1 and 9 are connected
-(connected? myuf 1 9) ; true
+(uf/connected? myuf 1 9) ; true
 
 ```
 

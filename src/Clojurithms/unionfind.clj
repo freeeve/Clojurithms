@@ -1,4 +1,4 @@
-(ns Clojurithms.unionfind)
+(ns clojurithms.unionfind)
 
 ; this implements the Weighted Quick Union UF algorithm
 (defrecord unionfind [ids sizes])

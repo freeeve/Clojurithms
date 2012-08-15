@@ -1,14 +1,12 @@
 (ns Clojurithms.unionfind)
 
+; this implements the Weighted Quick Union UF algorithm
 (defrecord unionfind [ids sizes])
 
 (defn with-length [n]
   (let [ids (vec (range n))
         sizes (vec (repeat n 1))]
     (->unionfind ids sizes)))
-
-; is there a better way to make the below methods so that they don't need
-; to have the uf structure passed in each time?
 
 ; finds the root of p
 (defn find-root [uf p]

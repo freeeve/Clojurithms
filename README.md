@@ -1,13 +1,15 @@
 # Clojurithms
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library containing the algorithms from the Java textbook Algorithms by Robert Sedgewick and Kevin Wayne.
+
+At least, that is the plan.
 
 ## Usage
 
-FIXME
+Not quite ready for use yet.
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 Wes Freeman
 
 Distributed under the Eclipse Public License, the same as Clojure.

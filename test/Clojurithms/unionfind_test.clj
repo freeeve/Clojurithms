@@ -1,6 +1,6 @@
-(ns Clojurithms.unionfind-test
+(ns clojurithms.unionfind-test
   (:use clojure.test
-        Clojurithms.unionfind))
+        clojurithms.unionfind))
 
 (deftest construct-with-length
   (testing "Construct with length"

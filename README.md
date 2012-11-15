@@ -24,6 +24,15 @@ Example union-find usage:
 ; check whether 1 and 9 are connected
 (uf/connected? myuf 1 9) ; true
 
+; alternate idiomatic syntax
+(ns TestClojure.core
+  (:require [clojurithms.unionfind :as uf]))
+
+(def myuf (-> (uf/with-length 10)
+              (uf/union 0 1)
+              (uf/union 0 9)))
+
+(uf/connected? myuf 1 9)
 ```
 
 ## License
@@ -31,12 +40,3 @@ Example union-find usage:
 Copyright © 2012 Wes Freeman
 
 Distributed under the Eclipse Public License, the same as Clojure.
-
-
-(ns TestClojure.core
-  (:require [clojurithms.unionfind :as uf]))
-
-(-> (uf/with-length 10)
-    (uf/union ,,, 0 1)
-    (uf/union ,,, 0 9)
-    (uf/connected? ,,, 1 9))

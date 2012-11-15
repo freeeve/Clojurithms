@@ -31,3 +31,12 @@ Example union-find usage:
 Copyright © 2012 Wes Freeman
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+
+(ns TestClojure.core
+  (:require [clojurithms.unionfind :as uf]))
+
+(-> (uf/with-length 10)
+    (uf/union ,,, 0 1)
+    (uf/union ,,, 0 9)
+    (uf/connected? ,,, 1 9))

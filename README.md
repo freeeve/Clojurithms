@@ -37,6 +37,6 @@ Example union-find usage:
 
 ## License
 
-Copyright © 2012 Wes Freeman
+Copyright © 2016 Eve Freeman
 
 Distributed under the Eclipse Public License, the same as Clojure.
